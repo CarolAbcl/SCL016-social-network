@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+  margin:0%;
+  padding: 0%;
+}
+
+.mainGrid{
+  display: grid;
+  width: 100%;
+  grid-template-areas:
+    'header header'
+    'main main'
+    'left left'
+    'footer footer';
+  grid-template-columns: 1fr 1fr;   
+  grid-template-rows: auto auto auto;
+  background-color: #343A5A;
+}
+
+.welcomeLogo{
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.welcomeLogo img{
+  width: 200px;
+}
+
+.info-container{
+  grid-area: main;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.womenWelcome{
+  grid-area: left;
+  display: flex;
+  height: 400px;
+}
+
+.womenWelcome img{
+  justify-content: center;
+  width: auto;
+  margin: auto;
+}
+
+.welcomeButtons{
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-button{
+  margin: auto;
+  width: 232px;
+  height: 46px;
+  border-radius: 30px;
+  border-style: hidden;
+  background-color: #F4C0C2;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  margin-top: 24px;
+  }
+
+.login-button:hover {
+  transition: background-color 2s;
+  background-color: #C17F89;
+}
+
+
+.register-button{
+  margin: auto;
+  width: 232px;
+  height: 46px;
+  background-color: #FFFFFF;
+  border: 3px solid #F4C0C2; 
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  margin-top: 24px;
+}
+
+.loginWithGoogle{
+  width: 232px;
+  height: 46px;
+  background-color: #FFFFFF;
+  border: 3px solid #F4C0C2; 
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  margin-top: 24px;
+}
+
+h1{
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 24px;
+  color: #F4C0C2;
+}
+
+.copyright{
+  grid-area: footer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.loginForm, .registerForm {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loginForm input, .registerForm input{
+  width: 80%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.textForm{
+  color: #F4C0C2;
+  width: 80%;
+  text-align: right;
+}
+
+.link{
+ text-decoration: underline;
+}
+
+.infoLink{
+  color: #F4C0C2;
+  width: 80%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.error-control{
+  color: #F4C0C2;
+  text-align: center;
+  margin: -5px;
+  
+}
+
+/*desktop view*/
+@media only screen and (min-width: 769px){
+.mainGrid{
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'left main'
+    'footer footer';
+}
+
+.welcomeLogo{
+  justify-content: left;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  padding-left: 68px;
+}
+.welcomeLogo img{
+  width: 280px;
+}
+
+h1{
+  font-size: 200%;
+}
+
+.loginForm, .registerForm {
+  width: 70%;
+}
+}
