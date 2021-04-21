@@ -1,4 +1,9 @@
-import { startFunction } from './index.js';
+import { initRouter } from './route.js';
+import { userVerification } from '../route.js';
 
-document.getElementById('root').appendChild(startFunction());
+const init = () => {
+  userVerification();
+  initRouter();
+};
 
+window.addEventListener('load', init);
