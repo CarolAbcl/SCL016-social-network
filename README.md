@@ -1,4 +1,4 @@
-# Creando una Red Social
+# Fempage
 
 ## Índice
 
@@ -21,23 +21,23 @@ El punto de partida para nuestro proyecto fue definir una tematica, feminismo, y
 Para ello realizamos una encuesta, la que fue respondida 86 mujeres quienes nos ayudaron a definir componentes de la aplicación, formas de interacción, incluso los colores a utilizar.
 
 Muestra de Resultados de la Encuesta:
-![Muestra de resultados encuesta](src/images/EncuestaRespuestas.png) 
+![Muestra de resultados encuesta](./src/images/EncuestaRespuestas.png) 
 
 Con la valiosa información recopilada generamos prototipo en papel y el prototipo de alta resolución con sus versiones para escritorio y móvil.
 
 Prototipo en papel:
-![Prototipo en papel](src/images/prototiposPapel.png) 
+![Prototipo en papel](./src/images/prototiposPapel.png) 
 
 Prototipo en Figma, verión desktop:
-![Prototipo en Figma](src/images/prototipo-AltaDesktop.png) 
+![Prototipo en Figma](./src/images/prototipo-AltaDesktop.png) 
 
-![Prototipo en Figma](src/images/prototipo2-Desktop.png) 
-
-Prototipo en Figma, versión movil:
-![Prototipo en Figma](src/images/prototipo-altaMovil.png) 
+![Prototipo en Figma](./src/images/prototipo2-Desktop.png) 
 
 Prototipo en Figma, versión movil:
-![Prototipo en Figma](src/images/prototipo2-altaMovil.png)
+![Prototipo en Figma](./src/images/prototipo-altaMovil.png) 
+
+Prototipo en Figma, versión movil:
+![Prototipo en Figma](./src/images/prototipo2-altaMovil.png)
 
 
 
