@@ -1,24 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
-*{
-  margin:0%;
+* {
+  margin: 0%;
   padding: 0%;
+  font-family: "Poppins", sans-serif;
 }
-
-.mainGrid{
+button, 
+a,
+i{
+  cursor: pointer;
+}
+h1 {
+  font-weight: 500;
+}
+.mainGrid {
   display: grid;
   width: 100%;
   grid-template-areas:
-    'header header'
-    'main main'
-    'left left'
-    'footer footer';
-  grid-template-columns: 1fr 1fr;   
-  grid-template-rows: auto auto auto;
-  background-color: #343A5A;
+    "header header"
+    "main main"
+    "left left"
+    "footer footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  background-color: #343a5a;
+  background-image: url("images/background.png");
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 100vw 100vh;
+  background-position-y: 10%;
 }
-
-.welcomeLogo{
+.welcomeLogo {
   grid-area: header;
   display: flex;
   justify-content: center;
@@ -26,94 +37,123 @@
   padding-top: 10px;
   padding-bottom: 20px;
 }
-
-.welcomeLogo img{
+.welcomeLogo img {
   width: 200px;
 }
-
-.info-container{
+.info-container {
   grid-area: main;
   display: flex;
   align-items: center;
   flex-direction: column;
+  z-index: 2;
 }
-
-.womenWelcome{
+.womenWelcome {
   grid-area: left;
   display: flex;
   height: 400px;
+  /* z-index: 2;*/
 }
 
-.womenWelcome img{
+.womenWelcome img {
   justify-content: center;
   width: auto;
   margin: auto;
 }
 
-.welcomeButtons{
+.welcomeButtons {
   grid-area: main;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.login-button{
+.login-button {
   margin: auto;
-  width: 232px;
+  width: 100%;
   height: 46px;
   border-radius: 30px;
   border-style: hidden;
-  background-color: #F4C0C2;
-  font-family: 'Poppins', sans-serif;
-  font-size: 12px;
-  margin-top: 24px;
-  }
+  background-color: #f4c0c2;
+  font-size: 14px;
+  margin-top: 20px;
+  color: #343a5a;
+}
 
 .login-button:hover {
-  transition: background-color 2s;
-  background-color: #C17F89;
+  background-color: #c17f89;
 }
 
-
-.register-button{
+.login {
   margin: auto;
+  width: 60%;
+  height: 46px;
+  border-radius: 30px;
+  border-style: hidden;
+  background-color: #f4c0c2;
+  font-size: 14px;
+  margin-top: 20px;
+  color: #343a5a;
+}
+
+.register-button {
+  margin: auto;
+  width: 100%;
+  height: 46px;
+  background-color: #ffffff;
+  border: 1px solid #f4c0c2;
+  border-radius: 30px;
+  font-size: 14px;
+  margin-top: 20px;
+  color: #343a5a;
+}
+
+.register-button:hover {
+  border: 3px solid #c17f89;
+}
+
+.register {
+  margin: auto;
+  width: 60%;
+  height: 46px;
+  border-radius: 30px;
+  border-style: hidden;
+  background-color: #ffffff;
+  border: 1px solid #f4c0c2;
+  font-size: 14px;
+  margin-top: 20px;
+  color: #343a5a;
+}
+
+.loginWithGoogle {
   width: 232px;
   height: 46px;
-  background-color: #FFFFFF;
-  border: 3px solid #F4C0C2; 
+  background-color: #ffffff;
+  border: 3px solid #f4c0c2;
   border-radius: 30px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 12px;
   margin-top: 24px;
 }
 
-.loginWithGoogle{
-  width: 232px;
-  height: 46px;
-  background-color: #FFFFFF;
-  border: 3px solid #F4C0C2; 
-  border-radius: 30px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 12px;
-  margin-top: 24px;
-}
-
-h1{
-  font-family: 'Poppins', sans-serif;
+h1 {
+  font-family: "Poppins", sans-serif;
   text-align: center;
   font-size: 24px;
-  color: #F4C0C2;
+  color: #f4c0c2;
 }
 
-.copyright{
+.copyright {
   grid-area: footer;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 12px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
+  background-color: #343a5a;
+  margin-top: 10px;
 }
 
-.loginForm, .registerForm {
+.loginForm,
+.registerForm {
   display: flex;
   width: 100%;
   align-items: center;
@@ -121,61 +161,703 @@ h1{
   flex-direction: column;
 }
 
-.loginForm input, .registerForm input{
+.loginForm input,
+.registerForm input {
   width: 80%;
   height: 30px;
   margin-bottom: 10px;
+  text-align: end;
 }
 
-.textForm{
-  color: #F4C0C2;
+.textForm {
+  color: #f4c0c2;
   width: 80%;
   text-align: right;
 }
 
-.link{
- text-decoration: underline;
+.link {
+  text-decoration: underline;
+  color: #f4c0c2;
 }
 
-.infoLink{
-  color: #F4C0C2;
+.infoLink {
+  color: #f4c0c2;
   width: 80%;
   text-align: center;
   margin-top: 10px;
 }
 
-.error-control{
-  color: #F4C0C2;
+.loginWithGoogle {
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 50px;
+  border-style: hidden;
+}
+
+.logoGoogle {
+  height: 22px;
+}
+.error-control {
+  color: #f4c0c2;
   text-align: center;
   margin: -5px;
-  
+}
+/*#svg-object{
+  width: 100vw;
+  height: auto;
+  position: relative;
+    top: -650px;
+    /* margin: 0px; 
+    margin: auto;
+    z-index: 1;
+}*/
+/* Feed Page */
+
+/*feed Page*/
+.feedGrid {
+  display: grid;
+  width: 100%;
+  grid-template-areas:
+    "createPost"
+    "commandBar"
+    "posts";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  background-color: #ffffff;
 }
 
-/*desktop view*/
-@media only screen and (min-width: 769px){
-.mainGrid{
+.topMenu {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr 0.4fr;
+  background-color: #c17f89;
+  margin-bottom: 10px;
+}
+
+.topMenu img {
+  width: 50px;
+}
+
+.burgerMenu {
+  color: #343a5a;
+  position: relative;
+  min-height: 48px;
+}
+
+.burgerMenu input[type="checkbox"],
+.burgerMenu .fa-bars,
+.burgerMenu .fa-times {
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 5px;
+  right: 0px;
+  width: 48px;
+  height: 48px;
+  background-color: #c17f89;
+}
+
+.burgerMenu .fa-bars,
+.burgerMenu .fa-times {
+  font-size: 38px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.burgerMenu input[type="checkbox"] {
+  opacity: 0;
+}
+
+.burgerMenu input:checked ~ .fa-bars {
+  display: none;
+}
+
+.burgerMenu input:not(:checked) ~ .fa-times {
+  display: none;
+}
+
+.menu {
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: auto;
+  top: 48px;
+  right: 0px;
+  border: 4px solid #f4c0c2;
+  border-right: 0px;
+  display: none;
+}
+
+.menu button {
+  background-color: #343a5a;
+  color: #f4c0c2;
+  text-align: center;
+  display: block;
+  padding: 12px;
+  font-size: 100%;
+  border-bottom: 1px solid #797ad4;
+  width: 200px;
+}
+
+.menu button:hover {
+  background-color: #797ad4;
+}
+
+.searchBar {
+  display: inline-block;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 30px;
+  height: 26px;
+  width: 100%;
+}
+
+.searchInput {
+  background-color: #ffffff;
+  border: hidden;
+  border-radius: 30px;
+  padding-left: 5px;
+  width: calc(100% - 25px);
+  height: 24px;
+  outline: none;
+}
+
+.searchBar button {
+  background-color: #ffffff;
+  border: hidden;
+  border-radius: 30px;
+  outline: none;
+}
+
+.leftBar {
+  display: none;
+}
+
+.rightBar {
+  display: none;
+}
+/*.postsView{
+  width: 90%;
+  margin: auto;
+}*/
+/*.posts{
+  grid-template-areas: posts;
+  width: 90%;
+}*/
+.posts {
+  grid-template-areas: posts;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.commandBar {
+  grid-template-areas: commandBar;
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px;
+  color: #797ad4;
+}
+
+#newPosts {
+  width: 100%;
+}
+
+.createPost {
+  grid-template-areas: "createPost";
+  margin: auto;
+  border: 3px solid #797ad4;
+  box-sizing: border-box;
+  width: 90%;
+  height: 120px;
+}
+
+.profileImage {
+  width: 30px;
+  height: 30px;
+  background: #f4c0c2;
+  border-radius: 50px;
+}
+
+.writtePost {
+  box-sizing: border-box;
+  width: 85%;
+  height: 55px;
+  resize: none;
+  background: #ededed;
+  border: 1px solid #7eb3dd;
+  color: #7eb3dd;
+  outline: none;
+}
+
+.writtePost::placeholder {
+  color: #7eb3dd;
+}
+
+.userPost {
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.commandPosting{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.postingButton {
+  width: 90px;
+  height: 36px;
+  background: #797ad4;
+  border-radius: 30px;
+  border-style: hidden;
+  color: white;
+  outline: none;
+  margin-right: 10px;
+  margin-left: 5%;
+}
+
+
+.postingButton:active {
+  background: #7eb3dd;
+}
+
+.commandBar select,
+#selectPrivacy {
+  color: #797ad4;
+  border-color: #797ad4;
+  /*margin-left: 45%;*/
+}
+
+.post {
+  width: 100%;
+  background-color: #ffffff;
+  border: 3px solid #797ad4;
+  padding: 5px;
+  box-sizing: border-box;
+  margin: 10px auto 0px;
   display: grid;
   grid-template-areas:
-    'header header'
-    'left main'
-    'footer footer';
+    "userPhoto userName menuEdit"
+    "userPhoto datepost datepost"
+    "mainArea mainArea main area";
+  grid-template-columns: 0.2fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
 }
 
-.welcomeLogo{
-  justify-content: left;
-  padding-top: 26px;
-  padding-bottom: 26px;
-  padding-left: 68px;
-}
-.welcomeLogo img{
-  width: 280px;
-}
-
-h1{
-  font-size: 200%;
+.postInfo{
+  display:grid;
+  grid-template-columns: 1 fr 1fr;
+  grid-template-rows: auto;
+  grid-column: 2/4;
+  grid-row: 1/2;
+  max-height: 55px;
 }
 
-.loginForm, .registerForm {
+.postUserphoto {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  margin: 2px auto;
+}
+
+.postedUsername {
+  grid-column: 1/2;
+  font-size: 20px;
+  font-weight: 500;
+  color: #343a5a;
+}
+
+.postedText {
+  grid-column: 1/4;
+  grid-row: 3/4;
+}
+
+.userProfile{
+  grid-template-areas: userInformation;
+  width: 100%;
+  margin:auto;
+  margin-top: -11px;
+}
+
+.userInfoContainer {
+  margin: auto;
+  border: 5px solid #c17f89;
+  border-radius: 0px 0px 10px 10px;
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "userPhoto userPhoto"
+    "userName userName"
+    "userBio userBio";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: .5fr 1fr .5fr;
+  padding: 5px;
+}
+
+.profileImage {
+  width: 45px;
+  height: 45px;
+  background: #f4c0c2;
+  border-radius: 50px;
+}
+
+.userBio {
+  grid-column: 1/3;
+  margin: 0px 20px;
+  color: #343a5a;
+}
+
+.userName {
+  color: #343a5a;
+  align-self: center;
+}
+
+.fa-edit {
+  float:right;
+  margin-right: 10px;
+}
+
+.userLinks {
+  grid-column: 1/3;
+  display: flex;
+  justify-content: space-around;
+  color: #343a5a;
+}
+
+.profileImage {
+  margin: auto;
+}
+
+.profileGrid {
+  display: grid;
+  width: 100%;
+  grid-template-areas:
+    "userInformation"
+    "commandBarProfile"
+    "profileFeed";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  background-color: #ffffff;
+}
+
+.commandBarProfile{
+  grid-template-areas: commandBarProfile;
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px;
+  color: #797ad4;
+}
+
+.profileFeed{
+  grid-template-areas: profileFeed;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fa-ellipsis-h{
+  grid-column: 3/4;
+  grid-row: 1/2;
+  float:right;
+  margin-right: 10px;
+}
+
+.profileModal{
+  position: absolute;
+  top: 120px;
+  left: 10%;
+  margin: auto;
+  border: 5px solid #C17F89;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 80%;
+  text-align: center;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 2fr .5fr;
+  grid-template-rows: 1fr
+}
+.profileEdit{
+  color:#343A5A;
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+.profileModal form{
+  color:#343A5A;
+  grid-column: 1/3;
+}
+.bioChanged{
+  resize: none;
+  box-sizing: border-box;
+  height: 90px;
+}
+
+.editProfileButton{
+  margin: 10px auto;
+  background-color: #343a5a;
+  border-radius: 50px;
+  color: #f4c0c2;
+  text-align: center;
+  display: block;
+  padding: 10px;
+  font-size: 18px;
+  width: 150px;
+  border-style: hidden;
+}
+.editProfileInput{
+  color: rgb(56, 56, 56);
+  background-color: rgb(236,236,236);
+  width: 80%;
+  min-height: 40px;
+  border:rgb(236,236,236) ;
+  margin: 10px 0px;
+}
+.postButtons{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: .4fr .4fr 2fr;
+  width: 100%;
+}
+.editProfile{
+  background-color: white;
+  border-style: none;
+  color: #343a5a;
+  font-size: 18px;
+}
+.likeButton,
+.dislikeButton{
+  background: #7EB3DD;
+  border-style: none;
+  width: 35px;
+  height: 23px;
+  margin-top: 0px;
+  border-radius: 0 0 30px 30px;
+  color: white;
+}
+.commentButton{
+  width: 100px;
+  grid-column: 4;
+  color: white;
+  background: #797AD4;
+  border-style: none;
+  border-radius: 0px 0px 30px 30px;
+  height: 30px;
+}
+.fa-comments{
+  color: white;
+}
+.fa-heart{
+  color :#C17F89;
+}
+
+.fa-frown{
+  color:#343a5a;
+}
+.postContainer{
+  width: 100%;
+}
+
+form textarea{
+  height: 100px;
+}
+
+.menuEdit{
+  display: none;
+  position: relative;
+  width: 55px;
+  height: 75px;
+  text-align: right;
+  border: 2px solid #797ad4;
+  background-color: #797ad4;
+}
+
+.menuEdit button{
+  padding: 5px;
+  margin: 2px;
+  width: 55px;
+  background-color: #797ad4;
+  color: #ffffff;
+}
+.editPostModal{
+  position: absolute;
+  top: 300px;
+  left: 15%;
+  background-color: white;
+  border: 2px solid #797ad4;
   width: 70%;
+  border-radius: 10px;
 }
+#editPostForm{
+  width: 80%;
 }
+#editPostForm textarea{
+  width: 100%;
+  height: 60px;
+}
+#closeEditProfile{
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin: 5px;
+}
+
+
+/*desktop view*/
+@media only screen and (min-width: 769px) {
+  .mainGrid {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "left main"
+      "footer footer";
+    background-image: url("images/backgroundDesktop.png");
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 95% 90%;
+    background-position-x: right;
+    height: 100vh;
+  }
+  .welcomeLogo {
+    justify-content: left;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    padding-left: 68px;
+  }
+
+  .welcomeLogo img {
+    width: 280px;
+  }
+
+  h1 {
+    font-size: 200%;
+  }
+
+  .loginForm,
+  .registerForm {
+    width: 70%;
+  }
+
+  .feedGrid {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+      "leftBar createPost rightBar"
+      "leftBar commandBar rightBar"
+      "leftBar posts rightBar";
+    grid-template-columns: 0.4fr 1fr 0.4fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .leftBar {
+    grid-template-areas: leftBar;
+    display: flex;
+    height: fit-content;
+    grid-column: 1/2;
+    grid-row: 1/4;
+  }  
+  .userSideBar{
+    color: #343a5a;
+    margin: 0px auto;
+    border: 5px solid #C17F89;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    grid-template-rows: .3fr 1fr;
+    padding : 10px 0px;
+    width: 95%;
+  }
+  .sidebarImage{
+    margin: auto;
+    background-color: #C17F89;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    grid-row: 1/2;
+  }
+  .sideBarUserName{
+    margin: auto 0px;
+  }
+  .sideBarUserName a{
+    text-decoration: none;
+  }
+
+  .sideBarUserBio{
+    grid-column: 1/3;
+    width: 85%;
+    margin: 0px auto;
+  }
+
+  .rightBar {
+    grid-template-areas: rightBar;
+    display: flex;
+    border: solid 1px;
+    height: 400px;
+    grid-column: 3/4;
+    grid-row: 1/4;
+  }
+
+  .commandBar {
+    grid-template-areas: commandBar;
+    grid-column: 2/2;
+    grid-row: 2/3;
+  }
+
+  .posts {
+    grid-column: 2/3;
+  }
+
+  .profileGrid {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+      "userInformation userInformation"
+      "commandBarProfile rightBar"
+      "profileFeed rightBar";
+    grid-template-columns: 1fr 0.3fr;
+    grid-template-rows: auto;
+  }
+
+  .userProfile {
+    grid-template-areas: userInformation;
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  .commandBarProfile{
+    grid-column: 1/2;
+    grid-row:2/3;
+    margin: 15px 5%;
+  }
+
+  .profileFeed{
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .profileModal{
+    position: absolute;
+    top: 150px;
+    left: 15%;
+    width: 70%;
+    padding: 10px;
+  }
+  .postButtons {
+    grid-template-columns: .2fr .2fr 2fr;
+  }
+  .userInfoContainer {
+    margin: 10px auto;
+    border-radius: 10px;
+    width: 85%;
+  }
+  .editProfile {
+    margin: 0px 0px 0px 55%;
+  }
+} /* end desktop view

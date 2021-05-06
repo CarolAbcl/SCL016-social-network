@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Fempage</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div id="root"></div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fempage</title>
+    <link rel="stylesheet" href="style.css" /> 
+  </head>
+  <body>
+    <div id="root"></div>
 
-  <script type="module" src="main.js"></script>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
-  <!-- Add Firebase Auth-->
-  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-      https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
-  <script>
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-      apiKey: "AIzaSyDXrCHbTRt3P95PvMl4xu5Ip24LC9BBU3o",
-      authDomain: "fempage-27fe0.firebaseapp.com",
-      projectId: "fempage-27fe0",
-      storageBucket: "fempage-27fe0.appspot.com",
-      messagingSenderId: "451198093098",
-      appId: "1:451198093098:web:dbb425cb84e00474f60053",
-      measurementId: "G-FRBFNKP8G0"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-    const auth = firebase.auth();
-  </script>
-
-</body>
+    <script type="module" src="main.js"></script>
+    <script src="https://kit.fontawesome.com/14fa3a2119.js" crossorigin="anonymous"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <!-- Add Firebase Auth-->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyDXrCHbTRt3P95PvMl4xu5Ip24LC9BBU3o",
+        authDomain: "fempage-27fe0.firebaseapp.com",
+        databaseURL: "https://fempage-27fe0.firebaseio.com",
+        projectId: "fempage-27fe0",
+        storageBucket: "fempage-27fe0.appspot.com",
+        messagingSenderId: "451198093098",
+        appId: "1:451198093098:web:dbb425cb84e00474f60053",
+        measurementId: "G-FRBFNKP8G0"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+  </body>
 </html>

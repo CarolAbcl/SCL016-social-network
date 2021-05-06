@@ -1,4 +1,7 @@
-import { startFunction } from './index.js';
+import services from './route.js';
 
-document.getElementById('root').appendChild(startFunction());
+const init = () => {
+  services.initRouter();
+};
 
+window.addEventListener('load', init);
