@@ -29,12 +29,12 @@ Prototipo en papel:
 <img src="./src/images/prototiposPapel.png" width= "400px" height="400px">
 
 Prototipo en Figma, verión desktop:
-<img src="./src/images/prototipo-AltaDesktop.png">
+<img src="./src/images/Prototipo-AltaDesktop.png">
 
-<img src="./src/images/prototipo2-Desktop.png">
+<img src="./src/images/Prototipo2-Desktop.png">
 
 Prototipo en Figma, versión movil:
-<img src="./src/images/prototipo-altaMovil.png">
+<img src="./src/images/Protoripo-altaMovil.png">
 
 <img src="./src/images/prototipo2-altaMovil.png">
 
